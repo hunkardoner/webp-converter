@@ -14,7 +14,7 @@ shopt -s nullglob nocaseglob extglob
 
 for FILE in *.@(jpg|jpeg|tif|tiff|png); do 
     COMPRESSED_FILE="./compressed/compressed-$FILE"
-    convert "$FILE" -quality 35% "$COMPRESSED_FILE"
+    magick "$FILE" -quality 35% "$COMPRESSED_FILE"
 done
 
 cd compressed;
